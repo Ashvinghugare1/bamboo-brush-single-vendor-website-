@@ -19,9 +19,7 @@
         @include('admin.header')
         <!-- partial -->
         <div class="main-panel">
-          @section('body')
-          
-          @show()
+          @include('admin.main')
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
          @include('admin.footer')
