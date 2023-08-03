@@ -51,7 +51,6 @@ Route::get('logout', function ()
 Route::get('/view_category', [AdminController::class,'view_category'])->name('view_category');
 Route::POST('/add-category', [AdminController::class,'add_category'])->name('add-category');
 Route::get('/delete-category/{id}', [AdminController::class,'delete_category'])->name('delete-category');
-// Route::POST('/edit-category/{id}', [AdminController::class,'show'])->name('edit-category');
 
 
 Route::get('/order', [AdminController::class,'order'])->name('order');
@@ -74,3 +73,10 @@ Route::get('/remove-cart/{id}',[ HomeController::class, 'remove_cart'])->name('r
 Route::get('/cash-order',[ HomeController::class, 'cash_order'])->name('cash-order');
 Route::get('/stripe/{totalprice}',[ HomeController::class, 'stripe'])->name('stripe');
 Route::post('/stripe/{totalprice}', [HomeController::class, 'stripepost'])->name('stripe.post');
+
+
+Route::get('/show-order',[ HomeController::class, 'show_order'])->name('show-order');
+Route::get('/cancel-order/{id}',[ HomeController::class, 'cancel_order'])->name('cancel-order');
+
+Route::post('/add-comment',[ HomeController::class, 'add_comment'])->name('add-comment');
+Route::post('/add-reply',[ HomeController::class, 'add_reply'])->name('add-reply');

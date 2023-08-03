@@ -10,4 +10,6 @@ class Order extends Model
 {
     use HasFactory;
     use Notifiable;
+    protected $fillable = ['product_title', 'quantity','price','image','payment_status', 'delivery_status'];
+
 }
